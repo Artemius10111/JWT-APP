@@ -1,0 +1,23 @@
+import React, { useContext, createContext } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import AppRoutes from './Routes';
+import AuthenticationModal from './components/AuthenticationModal'
+
+const AppContext = createContext(
+		false
+)
+
+const Main = () => {
+	const values = {"show": true } 
+    return (
+		<BrowserRouter>
+			<Navbar/>
+			<AppContext.Provider value="notShow"> 
+			<AuthenticationModal/>
+			<AppRoutes/>
+			</AppContext.Provider>
+		</BrowserRouter>
+	)
+}
+export default Main;

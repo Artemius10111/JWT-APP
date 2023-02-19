@@ -1,0 +1,11 @@
+django==4.0
+djangorestframework==3.13
+markdown
+django-filter
+django-extensions
+django-environ
+django-cors-headers
+Pillow
+djangorestframework-simplejwt
+gunicorn==20.1.0
+pydantic
